@@ -8,6 +8,8 @@ This project showcases a modern Java/Kotlin ecosystem featuring 7+ microservices
 
 ### 🌐 Web Interface
 The frontend provides a clean and responsive experience, communicating with backend services through the API Gateway.
+Implemented **dynamic sorting** by **date/likes** and ability to choose upload **date range**.
+Also implemented **pull-down-to-refresh** mechanics for updating images and comments
 
 |              Sign In              | Registration |
 |:---------------------------------:| :---: |
@@ -19,14 +21,16 @@ The frontend provides a clean and responsive experience, communicating with back
 | ![Main Feed](assets/main.png) |     ![Modal Details](assets/modal.png)     |
 | *S3-stored images with Redis caching* | *Real-time comments and activity tracking* |
 
-|                     Images Endless Scroll                      |            |
-|:--------------------------------------------------------------:| :---: |
-|               ![Scroll Feed](assets/scroll.png)                |            |
-| *Efficient data fetching and pagination via endless scrolling* |            |
+|                     Images Endless Scroll                      |     Pull Down To Refresh For Images & Comments     |
+|:--------------------------------------------------------------:|:--------------------------------------------------:|
+|               ![Scroll Feed](assets/scroll.png)                | ![Pull Down Refresh](assets/pull-down-refresh.png) |
+| *Efficient data fetching and pagination via endless scrolling* |             Convenient content refresh             |
 
 
 
 ## 🏗️ Architectural Overview
+
+![System Architecture Scheme](assets/architecture.png)
 
 The system is designed with the **Database-per-Service** principle and utilizes an **API Gateway** for centralized ingress and security enforcement.
 
