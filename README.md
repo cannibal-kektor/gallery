@@ -6,6 +6,26 @@ This project showcases a modern Java/Kotlin ecosystem featuring 7+ microservices
 
 ---
 
+### 🌐 Web Interface
+The frontend provides a clean and responsive experience, communicating with backend services through the API Gateway.
+
+|              Sign In              | Registration |
+|:---------------------------------:| :---: |
+|  ![Sign In](assets/sign-in.png)   | ![Registration](assets/registration.png) |
+| *JWT-based secure authentication* | *User profile creation via User Service* |
+
+| Main Feed |        Image Modal View & Comments         |
+| :---: |:------------------------------------------:|
+| ![Main Feed](assets/main.png) |     ![Modal Details](assets/modal.png)     |
+| *S3-stored images with Redis caching* | *Real-time comments and activity tracking* |
+
+|                     Images Endless Scroll                      |            |
+|:--------------------------------------------------------------:| :---: |
+|               ![Scroll Feed](assets/scroll.png)                |            |
+| *Efficient data fetching and pagination via endless scrolling* |            |
+
+
+
 ## 🏗️ Architectural Overview
 
 The system is designed with the **Database-per-Service** principle and utilizes an **API Gateway** for centralized ingress and security enforcement.
