@@ -13,11 +13,11 @@ The system is designed with the **Database-per-Service** principle and utilizes 
 ### 🧩 Core Services
 *   **[Front Service](https://github.com/cannibal-kektor/gallery-front)**: A responsive SPA built with **React, Redux, and Axios**.
 *   **[API Gateway](https://github.com/cannibal-kektor/api-gateway)**: Built on **Spring Cloud Gateway**. Implements routing, **Rate Limiting**, Request Size filtering, and **HTTPS termination**. It validates JWT tokens and relays user identity to downstream services.
-*   **[Authentication Service](https://github.com/cannibal-kektor/gallery-authentication-service)**: Handles user credentials and issues **Access/Refresh tokens**. Uses **Redis** for session management and PostgreSQL for persistence.
 *   **[Image Service](https://github.com/cannibal-kektor/gallery-image-service)**: Manages metadata (Postgres) and binary storage via **Amazon S3** (using **LocalStack** for local dev). Implements **S3 Signed URLs**, Caffeine L1 cache, and Spring Retry.
+*   **[Authentication Service](https://github.com/cannibal-kektor/gallery-authentication-service)**: Handles user credentials and issues **Access/Refresh tokens**. Uses **Redis** for session management and PostgreSQL for persistence.
 *   **[Activity Service](https://github.com/cannibal-kektor/gallery-activity-service)**: A **Kotlin-based** analytics service. It consumes events from **Kafka** (emitted by Image/Comment services) and stores user logs in **MongoDB**.
-*   **[User Service](https://github.com/cannibal-kektor/gallery-user-service)**:  Microservice for profile management with isolated database and Redis caching.
-*   **[Comment Service](https://github.com/cannibal-kektor/gallery-comment-service)**: Dedicated microservice for social interactions with isolated database and Redis caching.
+*   **[User Service](https://github.com/cannibal-kektor/gallery-user-service)**:  Microservice for profile management with isolated Postgres database and Redis caching.
+*   **[Comment Service](https://github.com/cannibal-kektor/gallery-comment-service)**: Dedicated microservice for social interactions with isolated Postgres database and Redis caching.
 ---
 
 ## ⚙️ Engineering & DevOps
@@ -33,7 +33,7 @@ Integrated with a professional **GitHub Actions** workflow:
 To ensure DRY principles, I developed a **shared Spring Boot Starter**. It automatically configures Spring Security to validate internal identity headers injected by the API Gateway, securing all backend communication.
 
 ### 🚀 Resilience & Observability
-*   **Fault Tolerance**: Implemented **Spring Retry** for cloud operations and **Testcontainers** for reliable integration testing.
+*   **Fault Tolerance**: Implemented **Spring Retry** for kafka operations and **Testcontainers** for reliable integration testing.
 *   **Monitoring**: Full **Spring Actuator** integration provides Readiness/Liveness health checks for Kubernetes orchestration.
 *   **Performance**: Hybrid caching strategy using **Caffeine (L1)** and **Redis (L2)**.
 
