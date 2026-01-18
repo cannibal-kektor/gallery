@@ -88,15 +88,16 @@ The ecosystem is ready for both local development and cloud scale:
 
 ## 🔗 Repository Navigation
 
-| Repository                                                                                                                     | Role | Stack                        |
-|:-------------------------------------------------------------------------------------------------------------------------------| :--- |:-----------------------------|
-| **[front-service](https://github.com/cannibal-kektor/gallery-front)**                                                          | UI / Frontend | React + Redux                |
-| **[api-gateway](https://github.com/cannibal-kektor/api-gateway)**                                                              | Ingress & JWT Filter | Java + Spring Cloud          |
-| **[auth-service](https://github.com/cannibal-kektor/gallery-authentication-service)**                                          | Identity & Tokens | Java + Redis + Postgres      |
-| **[user-service](https://github.com/cannibal-kektor/gallery-user-service)**                                                                                                     | User Profiles | Java + Postgres              |
-| **[image-service](https://github.com/cannibal-kektor/gallery-image-service)**                                                                                                    | Media & S3 Logic | Java + S3 + Redis + Postgres |
-| **[comment-service](https://github.com/cannibal-kektor/gallery-comment-service)**                                                                                                  | Social Interactions | Java + Redis + Postgres      |
-| **[activity-service](https://github.com/cannibal-kektor/gallery-activity-service)**                                                                                                 | Kafka Analytics | Kotlin + Kafka + MongoDB     |
-| **[auth-starter](https://github.com/cannibal-kektor/gallery-security-starter)**                                                                                                     | Internal Security Lib | Java + Spring Security       |
-| **[docker-compose-repo](https://github.com/cannibal-kektor/gallery-docker-compose)**                                                                                              | Orchestration | Docker Compose               |
-| **[helm-charts-repo](https://github.com/cannibal-kektor/gallery-kubernetes)**                                                                                                 | K8s Deployment | Helm (Umbrella Chart)        |
+| Repository                                                                            | Role                  | Stack                        |
+|:--------------------------------------------------------------------------------------|:----------------------|:-----------------------------|
+| **[front-service](https://github.com/cannibal-kektor/gallery-front)**                 | UI / Frontend         | React + Redux                |
+| **[api-gateway](https://github.com/cannibal-kektor/api-gateway)**                     | Ingress & JWT Filter  | Java + Spring Cloud          |
+| **[auth-service](https://github.com/cannibal-kektor/gallery-authentication-service)** | Identity & Tokens     | Java + Redis + Postgres      |
+| **[user-service](https://github.com/cannibal-kektor/gallery-user-service)**           | User Profiles         | Java + Postgres              |
+| **[image-service](https://github.com/cannibal-kektor/gallery-image-service)**         | Media & S3 Logic      | Java + S3 + Redis + Postgres |
+| **[comment-service](https://github.com/cannibal-kektor/gallery-comment-service)**     | Social Interactions   | Java + Redis + Postgres      |
+| **[activity-service](https://github.com/cannibal-kektor/gallery-activity-service)**   | Kafka Analytics       | Kotlin + Kafka + MongoDB     |
+| **[auth-starter](https://github.com/cannibal-kektor/gallery-security-starter)**       | Internal Security Lib | Java + Spring Security       |
+| **[gallery-BOM-pom](https://github.com/cannibal-kektor/gallery-bom)**                 | BOM pom               | Maven                        |
+| **[docker-compose-repo](https://github.com/cannibal-kektor/gallery-docker-compose)**  | Orchestration         | Docker Compose               |
+| **[helm-charts-repo](https://github.com/cannibal-kektor/gallery-kubernetes)**         | K8s Deployment        | Helm (Umbrella Chart)        |
